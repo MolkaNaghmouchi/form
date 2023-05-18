@@ -8,14 +8,14 @@ import { User } from '../model/user';
   styleUrls: ['./form.component.css'],
 })
 export class FormComponent implements OnInit {
-  user!: User;
+
 
   constructor() {}
 
   ngOnInit(): void {
-    this.user = new User();
+
   }
-  save(f:NgForm){
-console.log(f.value['login']);
+  save(){
+
   }
-}
+}                                                  

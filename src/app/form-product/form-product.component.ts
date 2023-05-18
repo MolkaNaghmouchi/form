@@ -14,13 +14,12 @@ export class FormProductComponent implements OnInit {
   ngOnInit(): void {
     this.product = new Product();
     this.list = [];
-    console.log(this.list)
+    console.log(this.list);
   }
   save() {
     this.product.like = 0;
     this.list.push(this.product);
-    console.log('afterr the click')
-    console.log(this.list)
-    
+    console.log('afterr the click');
+    console.log(this.list);
   }
 }

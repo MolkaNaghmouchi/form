@@ -1,4 +1,7 @@
 <h1>komutel</h1>
+
+<h1>Product list</h1>
+
 <div class="container">
   <form #f="ngForm">
     <div class="form-group">
@@ -7,31 +10,31 @@
         type="number"
         name="id"
         class="form-control"
-        required 
+        required
         pattern="[0-9]+$"
-        [(ngModel)]="product.id" #i="ngModel"
+        [(ngModel)]="product.id"
+        #i="ngModel"
       />
     </div>
     <div class="alert alert-danger" *ngIf="i.invalid && i.touched">
-        id doit être un nombre entier positif
+      id doit être un nombre entier positif
     </div>
     <div class="form-group">
       <label> Title :</label>
       <input
         type="text"
         name="Title"
-        class="form-control" 
+        class="form-control"
         [(ngModel)]="product.title"
         required
-  
-      #t="ngModel"
+        #t="ngModel"
       />
-    </div> 
-       <div class="alert alert-danger" *ngIf="t.invalid && t.touched">
-        tile is required 
-        <!--div *ngIf="t.errors.required"> title is a required filed</div>
+    </div>
+    <div class="alert alert-danger" *ngIf="t.invalid && t.touched">
+      tile is required
+      <!--div *ngIf="t.errors.required"> title is a required filed</div>
         <div *ngIf="t.errors.minlength"> tile minlength is equal to 3 </div-->
-       </div>                                           
+    </div>
     <div class="form-group">
       <label> quantity :</label>
       <input
@@ -39,14 +42,17 @@
         name="quantity"
         class="form-control"
         [(ngModel)]="product.quantity"
-        #q="ngModel" 
+        #q="ngModel"
         required
-        pattern ="[1-9][0-9][0-9]">
+        pattern="[1-9][0-9][0-9]"
+      />
     </div>
     <div class="alert alert-danger" *ngIf="q.invalid && q.touched">
-        quantity is required
-        </div>
-    
-    <button class="btn btn-warning" [disabled]="f.invalid" (click)="save()" > save </button>
+      quantity is required
+    </div>
+
+    <button class="btn btn-warning" [disabled]="f.invalid" (click)="save()">
+      save
+    </button>
   </form>
 </div>
